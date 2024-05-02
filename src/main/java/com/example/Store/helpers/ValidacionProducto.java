@@ -67,7 +67,7 @@ public class ValidacionProducto {
     }
 
     public boolean validarFotografia(String fotografia)throws Exception{
-        String regex = "^[a-zA-Z\\s.,'-]{1,255}$";
+        String regex = "^gs://[a-zA-Z0-9-._~/]+$";
         if (!this.evaluarPatron.evaluarPatron(fotografia,regex)){
             throw new Exception("Reviza la fotografia");
         }
